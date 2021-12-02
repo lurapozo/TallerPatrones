@@ -9,7 +9,7 @@ package sinpatron;
  *
  * @author david_000
  */
-public class Vehiculo {
+public class Vehiculo implements IVehiculo {
    public String color;
    public boolean direccionAsistida;
    public String marca;
