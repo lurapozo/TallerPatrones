@@ -1,4 +1,4 @@
-package patrones;
+package patrones.Decorator;
 
 import sinpatron.IVehiculo;
 

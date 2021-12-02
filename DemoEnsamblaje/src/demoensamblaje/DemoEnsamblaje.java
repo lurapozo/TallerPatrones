@@ -5,13 +5,8 @@
  */
 package demoensamblaje;
 
-import patrones.CamaraDecorator;
-import patrones.RadioDecorator;
-import patrones.SensorDecorator;
-import patrones.VehiculoDecorator;
-import patrones.VehiculoDirector;
-import patrones.vehiculoTipo1;
-import patrones.vehiculoTipo2;
+import patrones.Builder.*;
+import patrones.Decorator.*;
 import sinpatron.*;
 
 /**
@@ -77,13 +72,13 @@ public class DemoEnsamblaje {
         
         // Con builder
         
-        vehiculoTipo1 base1 = new vehiculoTipo1();
+        VehiculoBuilder base1 = new vehiculoTipo1();
         
-        VehiculoDirector director = new VehiculoDirector();
+        VehiculoDirector directorCitroen = new VehiculoDirector(base1);
         
-        director.construirCitroen(base1);
+        directorCitroen.construirVehiculo();
         
-        RadioDecorator decorador = new RadioDecorator(base1.getVehiculo());
+        RadioDecorator decorador = new RadioDecorator(directorCitroen.getVehiculo());
         
         SensorDecorator decorador2 = new SensorDecorator(decorador);
         
@@ -98,11 +93,13 @@ public class DemoEnsamblaje {
         
         // Con builder
         
-        vehiculoTipo2 base2 = new vehiculoTipo2();
+        VehiculoBuilder base2 = new vehiculoTipo2();
         
-        director.construirAudi(base2);
+        VehiculoDirector directorAudi = new VehiculoDirector(base2);
         
-        CamaraDecorator decorador3 = new CamaraDecorator(base2.getVehiculo());
+        directorAudi.construirVehiculo();
+        
+        CamaraDecorator decorador3 = new CamaraDecorator(directorAudi.getVehiculo());
         
         //Mostrar prestaciones actualizadas del vehiculo
 
