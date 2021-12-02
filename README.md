@@ -13,5 +13,3 @@ El decorator ayuda a añadir dispositivos extra a vehiculos sin tener que crear 
 
 ## 2.	Diseñe el diagrama de clases correspondiente aplicando los patrones de diseño. (adjunte el diagrama de clases)
 ![TallerPatrones_UML](https://user-images.githubusercontent.com/74026143/144453022-a30f77d5-ba9b-40e2-adb8-a8e8e01b3831.png)
-
-![sec](https://github.com/lurapozo/TallerPatrones/blob/main/TallerPatrones_UML.png?raw=true)
